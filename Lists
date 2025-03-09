@@ -1,3 +1,7 @@
+# cmd, *vals == first, last
+# getattr(lst, cmd)
+# *map(int, vals) - convert last to integer
+
 if __name__ == '__main__':
     N = int(input())
     
