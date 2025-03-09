@@ -1,0 +1,13 @@
+if __name__ == '__main__':
+    N = int(input())
+    
+lst = list()
+for i in range(N):
+    try:
+        cmd, *vals = input().split()
+        if cmd == 'print':
+            print(lst)
+        else:
+            getattr(lst, cmd)(*map(int, vals))
+    except (AttributeError, ValueError, TypeError) as e:
+        print(f"Error: {e}")
